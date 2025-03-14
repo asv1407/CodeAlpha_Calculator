@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Work+Sans:wght@500&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display {
+    width: 350px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: right;
+    padding: 20px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+.buttons {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    border-radius: 10px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reset, .delete {
+    color: white;
+    background: linear-gradient(145deg, #ff6b6b, #d13f30);
+}
+
+.equals {
+    color: white;
+    background: linear-gradient(145deg, #27ae60, #2ecc71);
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .display {
+        width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    button {
+        height: 45px;
+        font-size: 18px;
+    }
+}
